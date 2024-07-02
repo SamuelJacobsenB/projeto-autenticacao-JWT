@@ -24,7 +24,7 @@ app.use((req,res,next)=>{
 });
 //------------------------------------------------
 const path = require('path');
-
+app.use(express.static(path.join(__dirname,'public')));
 //------------------------------------------------
 const expressHandlebars = require('express-handlebars');
 const Handlebars = require('handlebars');
