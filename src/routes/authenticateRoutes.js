@@ -11,8 +11,6 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const JWT_SECRET = process.env.JWT_SECRET;
 //------------------------------------------------ ROUTES
-    //Admin routes:
-
     //Register routes:
         router.get('/register',(req,res)=>{
             res.render('user/register');
