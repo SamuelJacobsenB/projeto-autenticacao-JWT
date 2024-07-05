@@ -1,0 +1,16 @@
+{{#each erros}}
+    <div class="msg error_msg">{{message}}</div>
+{{else}}
+
+{{/each}}
+
+<h1 class="titulo">Crie sua postagem aqui:</h1>
+<form action="/admin/create/new" method="post" class="userform">
+    <label for="name">Nome: </label>
+        <input type="text" name="name" id="name" required>
+    <label for="description">Descrição: </label>
+        <input type="text" name="description" id="description">
+    <label for="content">Conteúdo: </label>
+        <textarea name="content" id="content" required></textarea>
+    <button type="submit" class="submit">Criar postagem</button>
+</form>

@@ -1,0 +1,17 @@
+<h1 class="admintitle">Edite ou delete uma postagem</h1>
+<div class="postlist">
+    {{#each posts}}
+        <div class="post">
+            <h3>{{name}}</h3>
+            <hr>
+            <p>{{description}}</p>
+            <form action="/admin/modify/delete" method="post">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn-delete">Deletar postagem</button>
+            </form>
+            <a href="/admin/modify/edit/{{_id}}"><button class="btn-edit">Editar postagem</button></a>
+        </div>
+    {{else}}
+        <h3>Nenhuma postagem registrada</h3>
+    {{/each}}
+</div>

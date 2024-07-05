@@ -1,0 +1,17 @@
+{{#each erros}}
+    <div class="msg error_msg">{{message}}</div>
+{{else}}
+
+{{/each}}
+
+<h1 class="titulo">Edite sua postagem aqui:</h1>
+<form action="/admin/modify/edit/saving" method="post" class="userform">
+    <input type="hidden" name="id" value="{{post._id}}">
+    <label for="name">Nome: </label>
+        <input type="text" name="name" id="name" value="{{post.name}}" required>
+    <label for="description">Descrição: </label>
+        <input type="text" name="description" id="description" value="{{post.description}}">
+    <label for="content">Conteúdo: </label>
+        <textarea name="content" id="content" required>{{post.content}}</textarea>
+    <button type="submit" class="submit">Confirmar edição</button>
+</form>

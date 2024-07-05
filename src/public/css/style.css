@@ -82,17 +82,17 @@ h1.titulo {
     padding: 40px;
 }
 
-form {
+form.userform {
     width: 30vw;
     margin: auto;
 }
 
-form > label {
+form.userform > label {
     display: block;
     font-size: 20px;
 }
 
-form > input {
+form.userform > input {
     font-size: 18px;
     width: 28vw;
     padding: 10px;
@@ -151,7 +151,7 @@ div.post > p {
     float: left;
 }
 
-div.post button {
+div.post button.btn-lookmore {
     background-color: greenyellow;
     color: green;
     font-size: 18px;
@@ -164,7 +164,7 @@ div.post button {
     transition: 0.8s
 }
 
-div.post button:hover {
+div.post button.btn-lookmore:hover {
     background-color: rgb(0, 251, 46);
     transition: 0.8s;
 }
@@ -185,4 +185,84 @@ div.postcontent > h1 {
 div.postcontent > p {
     margin: 10px;
     line-height: 30px;
+}
+
+
+
+h1.admintitle {
+    text-align: center;
+    font-size: 40px;
+    margin: 30px;
+}
+
+.link-admin {
+    text-decoration: none;
+}
+
+button.btn-admin {
+    display: block;
+    margin: auto;
+    background-color: rgb(106, 255, 47);
+    color: green;
+    font-size: 20px;
+    padding: 10px;
+    margin: 30px auto;
+    border: 1px solid rgba(0, 128, 0, 0.59);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s
+}
+
+button.btn-admin:hover {
+    background-color: rgb(0, 251, 46);
+    transition: 0.4s;
+}
+
+
+textarea {
+    font-size: 18px;
+    width: 28vw;
+    min-height: 180px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+
+form > button.btn-delete {
+    background-color: rgba(255, 34, 34, 0.725);
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    margin: 3px 10px;
+    border: 1px solid red;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+    transition: 0.4s
+}
+
+form > button.btn-delete:hover {
+    background-color: red;
+    transition: 0.4s;
+}
+
+button.btn-edit {
+    background-color: rgb(64, 207, 255);
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    margin: 3px 10px;
+    border: 1px solid rgb(14, 191, 255);
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+    transition: 0.4s
+}
+
+button.btn-edit:hover {
+    background-color: rgb(14, 191, 255);
+    transition: 0.4s;
 }
