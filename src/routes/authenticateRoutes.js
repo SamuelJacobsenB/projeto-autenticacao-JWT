@@ -133,5 +133,13 @@ const JWT_SECRET = process.env.JWT_SECRET;
                 };
             };
         });
+
+    //Sign out routes:
+        router.post('/signout',(req,res)=>{
+            res.clearCookie('token');
+            req.flash('success_msg','Usuário deslogado com sucesso');
+            res.redirect('/signin');
+
+        });
 //------------------------------------------------
 module.exports = router;
