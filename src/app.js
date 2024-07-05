@@ -21,10 +21,14 @@ app.use((req,res,next)=>{
     res.locals.error_msg = req.flash('error_msg');
     next();
 });
+//------------------------------------------------ / HELMET
+const helmet = require('helmet');
+app.use(helmet());
 //------------------------------------------------ / COOKIE-PARSER
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 const cookieJwtAuth = require('./config/cookieJwtAuth.js');
+const adminAuthenticate = require('./config/adminAuthenticate.js');
 //------------------------------------------------ / CSS-JS
 const path = require('path');
 app.use(express.static(path.join(__dirname,'public')));
@@ -54,8 +58,11 @@ mongoose.connect(DB_URL)
 //------------------------------------------------ / ROUTES
 const authenticateRoutes = require('./routes/authenticateRoutes.js');
 const usersRoutes = require('./routes/usersRoutes.js');
+const adminRoutes = require('./routes/adminRoutes.js');
+
 app.use('/',authenticateRoutes);
 app.use('/users', cookieJwtAuth, usersRoutes);
+app.use('/admin', adminAuthenticate, adminRoutes);
 //------------------------------------------------ / PORT
 app.listen(PORT,()=>{
     console.log('Server started...');

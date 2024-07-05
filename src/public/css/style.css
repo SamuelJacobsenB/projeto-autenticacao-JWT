@@ -118,3 +118,71 @@ button.submit:hover {
     background-color: rgba(0, 243, 0, 0.76);
     transition: 0.4s;
 }
+
+
+
+h2.welcome {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+}
+
+h3.lookposts {
+    font-size: 35px;
+    margin: 20px;
+}
+
+div.post {
+    min-height: 100px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+div.post > h3 {
+    font-size: 25px;
+    padding: 10px;
+}
+
+div.post > p {
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    float: left;
+}
+
+div.post button {
+    background-color: greenyellow;
+    color: green;
+    font-size: 18px;
+    padding: 8px;
+    margin: 3px 10px;
+    border: 1px solid rgba(0, 128, 0, 0.59);
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+    transition: 0.8s
+}
+
+div.post button:hover {
+    background-color: rgb(0, 251, 46);
+    transition: 0.8s;
+}
+
+
+div.postcontent {
+    display: block;
+    padding: 20px;
+    margin: auto;
+}
+
+div.postcontent > h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 10px;
+}
+
+div.postcontent > p {
+    margin: 10px;
+    line-height: 30px;
+}
